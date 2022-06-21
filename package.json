@@ -1,0 +1,33 @@
+{
+  "name": "@ashishpandey001/slugify",
+  "version": "0.0.1",
+  "description": "A program to generate slugs from strings.",
+  "repository": "ashishpandey001/slugify",
+  "module": "dist/index.esm.js",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "scripts": {
+    "build": "node build.js"
+  },
+  "bin": {
+    "slugify": "dist/cli.js"
+  },
+  "keywords": [
+    "slug",
+    "generator"
+  ],
+  "author": {
+    "name": "Ashishkumar Pandey",
+    "email": "ashishpandeyone@gmail.com"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "esbuild": "^0.14.47",
+    "npm-dts": "^1.3.11",
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "caporal": "^1.4.0",
+    "lodash.padstart": "^4.6.1"
+  }
+}
