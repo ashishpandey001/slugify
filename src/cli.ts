@@ -1,18 +1,15 @@
 #!/usr/bin/env node
 
-import * as prog from 'caporal';
+import { program } from "@caporal/core";
 
-import slugify from './index';
+import { slugify } from './index';
 
-prog
-  .version('1.0.0')
+program
   .description('A program to generate slugs from strings')
-  .argument('<string>', 'string to generate the slug from')
-  .option('-o <order>', 'use the order to prepend it to slug and ensure order')
-  .action((args, options, logger) => {
-    logger.info(args);
-    logger.info(options);
-    logger.info(slugify(args.string, options.o));
+  .argument('<string>', 'string to generate the slug from', { validator: program.STRING })
+  .option('-o <order>', 'use the order to prepend it to slug and ensure order', { validator: program.NUMBER })
+  .action(({ args, options, logger }) => {
+    logger.info(slugify(args.string as string, parseInt(options.o as string)));
   });
 
-prog.parse(process.argv);
+program.run();

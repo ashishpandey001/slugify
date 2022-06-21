@@ -3,7 +3,6 @@
   "version": "0.0.1",
   "description": "A program to generate slugs from strings.",
   "repository": "ashishpandey001/slugify",
-  "module": "dist/index.esm.js",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "scripts": {
@@ -27,7 +26,7 @@
     "typescript": "^4.7.4"
   },
   "dependencies": {
-    "caporal": "^1.4.0",
+    "@caporal/core": "^2.0.2",
     "lodash.padstart": "^4.6.1"
   }
 }

@@ -9,7 +9,7 @@ const slugify = (str: string, sortOrder?: number) => {
     .replace(/[^\w\-]+/g, '') // Remove all non-word characters
     .replace(/\-\-+/g, '-') // Replace multiple - with single -
     .replace(/^-+/, '') // Trim - from start of text
-    .replace(/-+$/, '');
+    .replace(/-+$/, ''); // Trim - from end of text
   let output = slugFromString;
   if (sortOrder) {
     output = `${padStart(sortOrder, 3, '0')}-${output}`;
@@ -17,4 +17,4 @@ const slugify = (str: string, sortOrder?: number) => {
   return output;
 };
 
-export default slugify;
+export { slugify };
